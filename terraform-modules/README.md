@@ -36,7 +36,7 @@
    ```
        az login
    ``` 
-     *Obs.: This command will open a Web page to you login in your azure account and after this, the page instruct you to come back to your terminal with this message:
+     *Note: This command will open a Web page to you login in your azure account and after this, the page instruct you to come back to your terminal with this message:
 
      **You have logged in. Now let us find all the subscriptions to which you have access...**
 
