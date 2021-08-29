@@ -36,7 +36,7 @@
    ```
        az login
    ``` 
-     *Note: This command will open a Web page to you login in your azure account and after this, the page instruct you to come back to your terminal with this message:
+     *Obs.: This command will open a Web page to you login in your azure account and after this, the page instruct you to come back to your terminal with this message:
 
      **You have logged in. Now let us find all the subscriptions to which you have access...**
 
@@ -60,7 +60,7 @@
       }
 
     ```
-   **Note: You need the "user" value to the next command**
+   **Obs.: You need the "user" value to the next command**
 
 * 2.8 - Get the subscription ID with the command bellow, replace the value of **microsoft_account_email** with the value that you got in the step before
 
@@ -85,7 +85,7 @@
        ```
          az ad sp create-for-rbac --name <service_principal_name>
        ```
-       *Note: You Need annotate the **appId**, the **password** and **tenant** values to use in the next command
+       *Obs.: You Need annotate the **appId**, the **password** and **tenant** values to use in the next command
 
 * 2.10 - Export the variables that you need to runs the terraform in the Azure
 
@@ -95,10 +95,10 @@
         export ARM_CLIENT_ID="<service_principal_appid>"
         export ARM_CLIENT_SECRET="<service_principal_password>"
      ```
-    * Note: In the **ARM_SUBSCRIPTION_ID** you need to put the value got in the 2.8 step in the ID value.
-    * Note: In the **ARM_TENANT_ID** you need to put the **tenant** value that you got in the 2.9.2 step.
-    * Note: In the **ARM_CLIENT_ID** you need to put the **appId** value that you got in the 2.9.2 step.
-    * Note: In the **ARM_CLIENT_SECRET** you need to put the **password** value that you got in the 2.9.2 step.
+    * Obs.: In the **ARM_SUBSCRIPTION_ID** you need to put the value got in the 2.8 step in the ID value.
+    * Obs.: In the **ARM_TENANT_ID** you need to put the **tenant** value that you got in the 2.9.2 step.
+    * Obs.: In the **ARM_CLIENT_ID** you need to put the **appId** value that you got in the 2.9.2 step.
+    * Obs.: In the **ARM_CLIENT_SECRET** you need to put the **password** value that you got in the 2.9.2 step.
 
 * 2.11 - Put the values inside the **create_aks_app.tf**, changing it with your own values
 
@@ -160,12 +160,13 @@
         
               + addon_profile {
      ```
+
+
 * 2.14 - Runs the terraform apply to create all resources. (--auto-approve is used to apply without confirmation)
 
    ```
      terraform apply --auto-approve
    ```
-
 
 
 * 2.15 - After you finish deploy application on the cluster, you need to get the **resource_group_name** value in the **create_aks_app** and use to include in the command bellow to configure your kubectl:
